@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: demo
+kafka:
+  bootstrap:
+    servers: localhost:${random.port}
+  embedded:
+    enabled: true
+    topics:
+      - test-topic
+  consumers:
+    default:
+      max.poll.records: 10
+
